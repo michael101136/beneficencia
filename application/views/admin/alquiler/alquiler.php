@@ -104,9 +104,7 @@
 					                                        </ul>
 					                                    </div>
 
-					                                    <div class="btn-group pull-left">
-					                                        <button type="button" class="btn btn-success" class="btn btn-sm btn-Success" id="btn_alquiler" data-toggle="modal" data-target="#modalAlquiler"  data-toggle="dropdown"><i class="fa fa-bars"></i>Alquiler</button>
-					                                    </div>
+					                           
 					                                </div>
 					                                <div class="panel-body ">
 					                                    <table id="tabla-DifuntoEliminados" class="table datatable">
@@ -370,18 +368,18 @@
                                                                 <input id="txt_apellidodifuntoModicar" name="txt_apellidodifuntoModicar" class="form-control" type="text" required>
                                                           </div>
                                                 </div>
-                                                <div class="form-group">
+                                               <!-- <div class="form-group">
                                                           <label class="col-md-1 control-label">Fecha Difunsion</label>
                                                            <div class="col-md-4">
                                                                  <input id="txt_fechafDifucionModicar" name="txt_fechafDifucionModicar" type="date" class="form-control calendario" required >
                                                           </div>
 
-                                                </div>
+                                                </div>-->
                                  </div>
                                  <br>
                                  <div class="row">
 
-                                                 <div class="form-group">
+                                                 -<!--<div class="form-group">
                                                    <input id="Id_alquileINichoDetalle" name="Id_alquileINichoDetalle"  class="form-control" type="hidden" required>
 
                                                           <label class="col-md-1 control-label">Fecha Alquiler</label>
@@ -397,7 +395,7 @@
                                                  <div class="form-group">
 
 
-                                                </div>
+                                                </div>-->
                                  </div>
                                  <br>
                                  <div class="row">
@@ -659,7 +657,7 @@
 				        },
 			        regexp:
 						{
-							regexp: /^[a-z][a-z]*/,
+							regexp: /^[A-z][a-z]*/,
 							message: '<b style="color: red;">El campo "nombre del difunto " debe ser solo letras.</b>'
 						}
 			 
@@ -676,41 +674,14 @@
 			         },
 			          regexp:
 						{
-							regexp: /^[a-z][a-z]*/,
+							regexp: /^[A-z][a-z]*/,
 							message: '<b style="color: red;">El campo "apellido del difunto " debe ser solo letras.</b>'
 						}
 			 
 			       }
 			 
 			     },
-			      txt_Dni: {
-			 
-			       validators: {
-			       	 regexp: {
-			 
-								 regexp: /^[0-8]+$/,
-			 
-								 message: 'El DNI solo puede contener números'
-			 
-							 },
-			 
-			         notEmpty: {
-			 
-			           message: 'El campo DNI del responsable es requerido'
-			 
-			         },
-			         stringLength: {
-			 
-								 min: 8,
-			 
-								 message: 'El DNI debe contener con 8 dígitoss'
-			 
-							 }
-			 
-			       }
-			 
-			     },
-
+			      
 			    txt_nombreresposable: 
 			    {
 			     	validators: {
@@ -722,7 +693,7 @@
 			        },
 			          regexp:
 						{
-							regexp: /^[a-z][a-z]*/,
+							regexp: /^[A-z][a-z]*/,
 							message: '<b style="color: red;">El campo "nombre del respnsable" debe ser solo letras.</b>'
 						}
 			        }
@@ -738,7 +709,7 @@
 			        },
 			          regexp:
 						{
-							regexp: /^[a-z][a-z]*/,
+							regexp: /^[A-z][a-z]*/,
 							message: '<b style="color: red;">El campo "apellido del responsable" debe ser solo letras.</b>'
 						}
 			        }
