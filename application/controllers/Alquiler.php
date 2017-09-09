@@ -120,10 +120,10 @@ class Alquiler extends CI_Controller {/* Mantenimiento de division funcional y g
           "estado" =>0,
           );
          $datoDetalle = array(
-          "Estado_AD" =>1,//Desablitar los disfuntos
+          "Estado_AD" =>0,//Desablitar los disfuntos
           );
       $datos = $this->Alquiler_model->DarBajaAlquiler($datas,$id_detallenicho,$datoDetalle,$id_detallenicho2);
-      echo json_encode(['proceso' => 'Correcto', 'mensaje' => 'Dastos registrados  correctamente.']);exit;
+      echo json_encode(['proceso' => 'Correcto', 'mensaje' => 'Dastos del difunto eliminados  correctamente.']);exit;
   }
   public function updateDeudaNicho()
   {
