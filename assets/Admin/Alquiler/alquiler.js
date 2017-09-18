@@ -243,7 +243,7 @@
                                     {"data":"deuda","defaultContent": "<button>Estado</button>", "class": "center","render": function ( data, type, full, meta )
                                         {
                                           var i=data;
-                                          if(i==-0 || i<0)
+                                          if(i==-0 || i<0 || i==null)
                                           {
                                             return '<a href=""><span class="label label-sm label-success"> 0</span></a>'
                                           }else{
