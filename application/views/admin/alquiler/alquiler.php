@@ -536,11 +536,11 @@
                                                           </div>
                                                            <div class="col-md-4">
                                                                 <label class="col-md-10">Precio Renovación</label>
-                                                                <input class="form-control" id="precioRenovacionA" name="precioRenovacionA" >
+                                                                <input class="form-control" id="precioRenovacionA" name="precioRenovacionA" required >
                                                           </div>
                                                            <div class="col-md-4">
                                                            		<label class="col-md-10">Numero de años</label>
-                                                                <input class="form-control" id="txt_aniosAlquiler" name="txt_aniosAlquiler">
+                                                                <input class="form-control" id="txt_aniosAlquiler" name="txt_aniosAlquiler" required>
                                                           </div>
 
                                                 </div>
@@ -572,7 +572,7 @@
                                 <div class="hr hr-1 dotted hr-double"></div>
                                 <div clasws="row">
                                                 <div class="form-group">
-                                                  		  <input id="id_detalleNicho" name="id_detalleNicho"  type="text" class="form-control">
+                                                  		  <input id="id_detalleNicho" name="id_detalleNicho"  type="hidden" class="form-control">
 
                                                           <label class="col-md-2 control-label">Nombre Completo</label>
                                                            <div class="col-md-8">
