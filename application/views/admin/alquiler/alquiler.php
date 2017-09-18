@@ -33,11 +33,7 @@
 					                                        <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i> Exportar</button>
 					                                        <ul class="dropdown-menu">
 					                                            <li><a href="#" onClick ="$('#tabla-alquiler').tableExport({type:'excel',escape:'false'});"><img src='<?php echo  base_url();?>assets/img/icons/xls.png' width="24"/> XLS</a></li>
-					                                            <li><a href="#" onClick ="$('#tabla-alquiler').tableExport({type:'doc',escape:'false'});"><img src='<?php echo  base_url();?>assets/img/icons/word.png' width="24"/> Word</a></li>
-					                                            <li><a href="#" onClick ="$('#tabla-alquiler').tableExport({type:'powerpoint',escape:'false'});"><img src='<?php echo  base_url();?>assets/img/icons/ppt.png' width="24"/> PowerPoint</a></li>
-					                                            <li class="divider"></li>
-					                                            <li><a href="#" onClick ="$('#tabla-alquiler').tableExport({type:'png',escape:'false'});"><img src='<?php echo  base_url();?>assets/img/icons/png.png' width="24"/> PNG</a></li>
-					                                            <li><a href="#" onClick ="$('#tabla-alquiler').tableExport({type:'pdf',pdfFontSize:'7',escape:'false',columns: ':visible'});"><img src='<?php echo  base_url();?>assets/img/icons/pdf.png' width="24"/> PDF</a></li>
+
 					                                        </ul>
 					                                    </div>
 
@@ -96,11 +92,7 @@
 					                                        <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i> Exportar</button>
 					                                        <ul class="dropdown-menu">
 					                                            <li><a href="#" onClick ="$('#tabla-DifuntoEliminados').tableExport({type:'excel',escape:'false'});"><img src='<?php echo  base_url();?>assets/img/icons/xls.png' width="24"/> XLS</a></li>
-					                                            <li><a href="#" onClick ="$('#tabla-DifuntoEliminados').tableExport({type:'doc',escape:'false'});"><img src='<?php echo  base_url();?>assets/img/icons/word.png' width="24"/> Word</a></li>
-					                                            <li><a href="#" onClick ="$('#tabla-DifuntoEliminados').tableExport({type:'powerpoint',escape:'false'});"><img src='<?php echo  base_url();?>assets/img/icons/ppt.png' width="24"/> PowerPoint</a></li>
-					                                            <li class="divider"></li>
-					                                            <li><a href="#" onClick ="$('#tabla-DifuntoEliminados').tableExport({type:'png',escape:'false'});"><img src='<?php echo  base_url();?>assets/img/icons/png.png' width="24"/> PNG</a></li>
-					                                            <li><a href="#" onClick ="$('#tabla-DifuntoEliminados').tableExport({type:'pdf',pdfFontSize:'7',escape:'false',columns: ':visible'});"><img src='<?php echo  base_url();?>assets/img/icons/pdf.png' width="24"/> PDF</a></li>
+
 					                                        </ul>
 					                                    </div>
 
