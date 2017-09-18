@@ -329,6 +329,7 @@
                     {
                         var data=table.row( $(this).parents("tr")).data();
                             var boleta=data.id_nicho_detalle;
+                            console.log(boleta);
                             swal({
                             title: "Esta seguro de generar una boleta!",
                             text: "",

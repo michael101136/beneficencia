@@ -66,7 +66,7 @@
 					                                                <th>Responsable Apellido</th>
 					                                                <th>Fecha Inicio</th>
 					                                                <th>Fecha Vencimiento</th>
-					                                                <th>Monto Alquiler</th>
+					                                                <th>Monto pagado</th>
 					                                                <th>Deuda</th>
 					                                                <th>Estado</th>
 					                                                <th>Acción</th>
@@ -170,7 +170,7 @@
                 </div>
                 <!-- END PAGE CONTENT WRAPPER -->
 <!-- /.ventana alquiler -->
-<div class="modal fade" id="modalAlquiler" role="dialog">
+<div class="modal fade" id="modalAlquiler" role="dialog" data-backdrop="static">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
@@ -189,7 +189,7 @@
                  		</ul>
                  		<button class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i>Exportar</button>
                  		<ul class="dropdown-menu">
-                 			<li><a href="<?php echo site_url('Factura/')?>"><img src='<?php echo  base_url();?>assets/img/icons/pdf.png' width="24"/> BOLETA</a></li>
+                 			<li><a id="resfrescarAquiler" href="<?php echo site_url('Factura/')?>" target="_blank"><img src='<?php echo  base_url();?>assets/img/icons/pdf.png' width="24"/> BOLETA</a></li>
                  		</ul>
                  	</div>
                   </div>
@@ -517,7 +517,7 @@
                                 <div class="hr hr-1 dotted hr-double"></div>
                                 <div clasws="row">
                                                 <div class="form-group">
-                                                  		  <input id="id_detalleNichoR" name="id_detalleNichoR"  type="text" class="form-control" >
+                                                  		  <input id="id_detalleNichoR" name="id_detalleNichoR"  type="hidden" class="form-control" >
                                                           <label class="col-md-2 control-label">Nombre Completo</label>
                                                            <div class="col-md-8">
                                                                 <input id="txt_nombredDiCompleto" name="txt_nombredDiCompleto"  class="form-control" type="text">
@@ -746,8 +746,8 @@
 			},
 			function()
 			{
-				window.location.href='<?=base_url();?>index.php/Alquiler/index';
-				renderLoading();
+				//window.location.href='<?=base_url();?>index.php/Alquiler/index';
+				//renderLoading();
 			});
 		}, false, true);
 	});
@@ -886,13 +886,17 @@ $('#form-ModificarAlquiler').bootstrapValidator({
  
 });
 
-
   $('.modal').on('hidden.bs.modal', function(){
     $(this).find('form')[0].reset(); //para borrar todos los datos que tenga los input, textareas, select.
     $("label.error").remove();  //lo utilice para borrar la etiqueta de error del jquery validate
   });
 
 
+$('#resfrescarAquiler').on('click', function(event)
+	{
+		window.location.href='<?=base_url();?>index.php/Alquiler/index';
+		renderLoading();	
+	});
 
 
 </script>

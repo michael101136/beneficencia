@@ -174,13 +174,13 @@ class Alquiler extends CI_Controller {/* Mantenimiento de division funcional y g
         "fecha_final" =>$fechaFinalAlquiler,
         "EstadoA"  =>'1',
         "CantidadAnio" =>$txt_aniosAlquiler,
-        "MontoAlquiler" =>$precioRenovacionA
+        "MontoAlquiler" =>$txt_TotalPago
         );
       $thistorial=array(
         "id_nicho_detalle" =>$id_detalleNichoR,
         "fechaih" =>$txt_fechaFinalA,
         "fechafh" =>$fechaFinalAlquiler,
-        "montoRenovacion" =>$precioRenovacionA
+        "montoRenovacion" =>$txt_TotalPago
       );
 
       $data=$this->Alquiler_model->RenovacionAlquiler($tnichoDetalle,$id_detalleNichoR,$thistorial);
