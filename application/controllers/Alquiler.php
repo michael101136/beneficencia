@@ -163,7 +163,7 @@ class Alquiler extends CI_Controller {/* Mantenimiento de division funcional y g
       $txt_aniosAlquiler=$this->input->post('txt_aniosAlquiler');
       $txt_TotalPago=$this->input->post('txt_TotalPago');
       
-      $fechaFinalTemp=date("d-m",strtotime($txt_fechaFinalA));
+      $fechaFinalTemp=date("m-d",strtotime($txt_fechaFinalA));
       $anioTemp=date("Y" , strtotime($txt_fechaFinalA));
 
       $anioTempFinalAlquiler=(int)$anioTemp + (int)$txt_aniosAlquiler;

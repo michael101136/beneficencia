@@ -89,7 +89,7 @@
                         type:$(this).attr('method'),
                         data:$(this).serialize(),
                         success:function(respuesta){
-                          swal("Se Renovo Correctamente")
+                          swal("Se renovó Correctamente");
                           $('#tabla-alquiler').dataTable()._fnAjaxUpdate();
                         }
                     });
@@ -318,7 +318,7 @@
                                           }
                            				 };
 		                          		
-									}
+								        	}
 								});
                     });
                 }
