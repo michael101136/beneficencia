@@ -132,21 +132,21 @@ class Alquiler extends CI_Controller {/* Mantenimiento de division funcional y g
       $datos = $this->Alquiler_model->detalleDeudaAquiler($id_detalleNicho);
       
       
-      $fecha=date("d-m", strtotime($datos->fecha_final)); 
-      $fechaSistema=(int)(date("Y", strtotime($datos->fechaSistema)))+1; 
+      $fecha=date("m-d", strtotime($datos->fecha_final)); //Nueva fecha inicio
+      $fechaSistema=(int)(date("Y", strtotime($datos->fechaSistema))); //nueva fecha final
       //condicion en caso de ser mayor
       $fechaActRenova=$fechaSistema.'-'.$fecha;
       $precio_renovacion=$datos->precio_renovacion;
       
-      $this->Alquiler_model->updateAlquilerDeuda($id_detalleNicho,$fechaActRenova,$precio_renovacion);
+      $this->Alquiler_model->updateAlquilerDeuda($id_detalleNicho,$fechaActRenova,$fechaActRenova,$datos->fecha_final);
       $NichoHistorial = array(
           "id_nicho_detalle" =>$id_detalleNicho,
-          "fechaih" =>$fechaActRenova,
+          "fechaih" =>$datos->fecha_final,
           "fechafh" =>$fechaActRenova,
           "montoRenovacion" =>$datos->deuda
           );
       $this->Alquiler_model->insertAlquilerHistorial($NichoHistorial);
-      echo json_encode($id_detalleNicho);
+      echo json_encode($datos->fecha_final);
     }
     else
     {

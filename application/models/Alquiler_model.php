@@ -45,10 +45,10 @@ function get_DifuntoBaja()
     }
 
   }
-  function updateAlquilerDeuda($id_detalleNicho,$fechaActRenova,$precio_renovacion)	
+  function updateAlquilerDeuda($id_detalleNicho,$fechaActRenova,$precio_renovacion,$fechaInicio)	
   {
       $this->db->reconnect();
-      $this->db->query("call updateAlquilerDeuda_U ('$id_detalleNicho','$fechaActRenova','$precio_renovacion')");
+      $this->db->query("call updateAlquilerDeuda_U ('$id_detalleNicho','$fechaActRenova','$precio_renovacion','$fechaInicio')");
       if ($this->db->affected_rows() > 0)
       {
         return true;

@@ -77,6 +77,7 @@
                         type:$(this).attr('method'),
                         data:$(this).serialize(),
                         success:function(respuesta){
+                          console.log(respuesta);
                           $('#tabla-alquiler').dataTable()._fnAjaxUpdate();
                         }
                     });
